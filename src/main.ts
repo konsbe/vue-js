@@ -18,3 +18,6 @@ const app = createApp(App)
 registerPlugins(app)
 
 app.mount('#app')
+// app.config.compilerOptions.isCustomElement = (tag) => {
+//     return tag.startsWith('ion-') // (return true)
+//   }

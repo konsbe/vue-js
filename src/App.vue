@@ -1,11 +1,12 @@
 <template>
   <v-app>
     <v-main>
-      <HelloWorld />
+      <HorizontalNavBar />
+      <RouterView />
     </v-main>
   </v-app>
 </template>
 
 <script setup lang="ts">
-  import HelloWorld from '@/components/HelloWorld.vue'
+import HorizontalNavBar from '@/components/NavBar/HorizontalNavBar.vue';
 </script>
