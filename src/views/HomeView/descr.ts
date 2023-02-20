@@ -1,16 +1,19 @@
+import CustomButton from "@/components/Buttons/mainButton";
+import BlogPost from "@/components/Card";
 export default {
-  data: () => {
+  name: "Description",
+  data() {
     return {
-      count: 0,
+      posts: [
+        { id: 1, title: "My journey with Vue" },
+        { id: 2, title: "Blogging with Vue" },
+        { id: 3, title: "Why Vue is so fun" },
+      ],
     };
   },
-  template: `
-    <button @click="count++">
-      You clicked me {{ count }} times.
-    </button>`,
-} as buttonType;
-
-export type buttonType = ComponentProps<{
-  data(): { count: number;};
-  template: string;
-}>;
+  components: {
+    CustomButton,
+    BlogPost,
+  },
+  props: ["title", "id"],
+};
