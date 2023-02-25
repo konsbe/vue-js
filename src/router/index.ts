@@ -5,11 +5,6 @@ const routes = [
   {
     path: "/",
     // component: () => import('@/layouts/default/Default.vue'),
-    components: {
-      // default: Default,
-      default: HomeSubNav,
-    },
-    // component: () => import('@/components/sub/HomeSubNav.vue'),
     children: [
       {
         path: "",
@@ -20,29 +15,33 @@ const routes = [
         component: () =>
           import(/* webpackChunkName: "home" */ "@/views/HomeView/index.vue"),
       },
-      {
-        name: "Overview",
-        path: "/home/overview",
-        component: () =>
-          import(/* webpackChunkName: "home" */ "@/views/AboutView.vue"),
-      },
-      {
-        name: "Description",
-        path: "/home/description",
-        component: () =>
-          import(/* webpackChunkName: "home" */ "@/views/HomeView/Description.vue"),
-      },
     ],
   },
   {
     path: "/about",
-    component: () => import("@/layouts/default/Default.vue"),
+    // component: () => import("@/layouts/default/Default.vue"),
+    components: {
+      // default: Default,
+      default: HomeSubNav
+    },
     children: [
       {
         path: "",
         name: "About",
         component: () =>
           import("@/views/AboutView/index.vue"),
+      },
+      {
+        name: "Overview",
+        path: "/about/overview",
+        component: () =>
+          import("@/views/AboutView/index.vue"),
+      },
+      {
+        name: "Description",
+        path: "/about/description",
+        component: () =>
+          import("@/views/AboutView/Description.vue"),
       },
     ],
   },
