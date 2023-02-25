@@ -1,7 +1,7 @@
 <template>
   <div class="container-wrapper">
     <!-- <v-container class="home-sub-nav">
-        <HomeSubNav />
+        <AboutSubNav />
       </v-container> -->
     <v-container class="main-content">
       <HelloWorld />

@@ -1,6 +1,6 @@
 // Composables
 import { createRouter, createWebHistory } from "vue-router";
-import HomeSubNav from "@/components/sub/HomeSubNav.vue";
+import AboutSubNav from "@/components/sub/AboutSubNav.vue";
 const routes = [
   {
     path: "/",
@@ -22,7 +22,7 @@ const routes = [
     // component: () => import("@/layouts/default/Default.vue"),
     components: {
       // default: Default,
-      default: HomeSubNav
+      default: AboutSubNav
     },
     children: [
       {
