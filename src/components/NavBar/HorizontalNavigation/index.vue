@@ -1,4 +1,4 @@
-<script lang="ts" src="./horizontalNavBar.ts"></script>
+<script lang="ts" src="./index.ts"></script>
 <!-- <template>
   <v-container class="mainpage-sub-routing">
     <v-row>

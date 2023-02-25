@@ -8,5 +8,5 @@
 </template>
 
 <script setup lang="ts">
-import HorizontalNavBar from '@/components/NavBar/HorizontalNavBar.vue';
+import HorizontalNavBar from '@/components/NavBar/HorizontalNavigation/index.vue';
 </script>
