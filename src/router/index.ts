@@ -2,6 +2,9 @@
 import { createRouter, createWebHistory } from "vue-router";
 import AboutSubNav from "@/components/sub/AboutSubNav.vue";
 import HomeView from "@/views/HomeView/index.vue";
+// import ProductsView from "@/views/Products/index.vue";
+import DashboardView from "@/views/Dashboard/index.vue";
+import TeamView from "@/views/Team/index.vue";
 const routes = [
   {
     path: "/",
@@ -10,7 +13,7 @@ const routes = [
       {
         path: "",
         name: "Home",
-        component: { HomeView },
+        component: () => import('@/views/HomeView/index.vue'),
       },
     ],
   },
@@ -20,7 +23,7 @@ const routes = [
       {
         path: "",
         name: "Dashboard",
-        component: { HomeView },
+        component: () => import('@/views/Dashboard/index.vue'),
       },
     ],
   },
@@ -30,7 +33,7 @@ const routes = [
       {
         path: "",
         name: "Products",
-        component: { HomeView },
+        component: () => import('@/views/Products/index.vue'),
       },
     ],
   },
@@ -40,7 +43,7 @@ const routes = [
       {
         path: "",
         name: "Team",
-        component: { HomeView },
+        component: () => import('@/views/Team/index.vue'),
       },
     ],
   },
