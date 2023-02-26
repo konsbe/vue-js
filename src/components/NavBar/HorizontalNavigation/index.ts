@@ -8,9 +8,9 @@ export default {
         return {
             drawer:false,
             verticalNavigationItems: [
-                {icon: 'dashboard', text: "Dashboard", route: '/dashboard'},
-                {icon: 'product', text: "Products", route: '/products'},
-                {icon: 'person', text: "Team", route: '/team'}
+                {icon: 'dashboard', title: "Dashboard", subTitle: "Dashboard", route: '/dashboard'},
+                {icon: 'list', title: "Products", subTitle: "Products", route: '/products'},
+                {icon: 'person', title: "Team", subTitle: "Team", route: '/team'}
             ]
         }
     },

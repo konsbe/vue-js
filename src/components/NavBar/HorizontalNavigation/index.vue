@@ -9,21 +9,12 @@
 </template> -->
 <template>
   <div>
-    <v-toolbar
-      dark
-      prominent
-      image="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg"
-    >
+    <v-toolbar dark prominent image="https://cdn.vuetifyjs.com/images/backgrounds/vbanner.jpg">
       <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-toolbar-title class="grey--text"
-        ><span class="font-weight-light">kober</span
-        ><span>TECK</span></v-toolbar-title
-      >
+      <v-toolbar-title class="grey--text"><span class="font-weight-light">kober</span><span>TECK</span></v-toolbar-title>
 
       <v-btn flat color="grey"><RouterLink to="/">Home</RouterLink></v-btn>
-      <v-btn flat color="grey"
-        ><RouterLink to="/about">About</RouterLink></v-btn
-      >
+      <v-btn flat color="grey"><RouterLink to="/about">About</RouterLink></v-btn>
 
       <v-spacer></v-spacer>
 
@@ -38,12 +29,11 @@
         router
         :to="item.route"
         class="white--text"
-        :title="item.text"
+        :title="item.title"
+        :subtitle="item.subTitle"
       >
         <template v-slot:prepend>
-          <!-- <v-avatar color="grey-lighten-1"> -->
-            <v-icon color="white--text">{{ item.icon }}</v-icon>
-          <!-- </v-avatar> -->
+          <v-icon color="white--text" :icon="item.icon" />
         </template>
       </v-list-item>
     </v-navigation-drawer>
