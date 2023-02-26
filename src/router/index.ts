@@ -1,6 +1,7 @@
 // Composables
 import { createRouter, createWebHistory } from "vue-router";
 import AboutSubNav from "@/components/sub/AboutSubNav.vue";
+import HomeView from "@/views/HomeView/index.vue";
 const routes = [
   {
     path: "/",
@@ -9,11 +10,37 @@ const routes = [
       {
         path: "",
         name: "Home",
-        // route level code-splitting
-        // this generates a separate chunk (about.[hash].js) for this route
-        // which is lazy-loaded when the route is visited.
-        component: () =>
-          import(/* webpackChunkName: "home" */ "@/views/HomeView/index.vue"),
+        component: { HomeView },
+      },
+    ],
+  },
+  {
+    path: "/dashboard",
+    children: [
+      {
+        path: "",
+        name: "Dashboard",
+        component: { HomeView },
+      },
+    ],
+  },
+  {
+    path: "/products",
+    children: [
+      {
+        path: "",
+        name: "Products",
+        component: { HomeView },
+      },
+    ],
+  },
+  {
+    path: "/team",
+    children: [
+      {
+        path: "",
+        name: "Team",
+        component: { HomeView },
       },
     ],
   },
@@ -22,26 +49,26 @@ const routes = [
     // component: () => import("@/layouts/default/Default.vue"),
     components: {
       // default: Default,
-      default: AboutSubNav
+      default: AboutSubNav,
     },
     children: [
       {
         path: "",
         name: "About",
-        component: () =>
-          import("@/views/AboutView/index.vue"),
+        // route level code-splitting
+        // this generates a separate chunk (about.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import("@/views/AboutView/index.vue"),
       },
       {
         name: "Overview",
         path: "/about/overview",
-        component: () =>
-          import("@/views/AboutView/index.vue"),
+        component: () => import("@/views/AboutView/index.vue"),
       },
       {
         name: "Description",
         path: "/about/description",
-        component: () =>
-          import("@/views/AboutView/Description.vue"),
+        component: () => import("@/views/AboutView/Description.vue"),
       },
     ],
   },

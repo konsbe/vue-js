@@ -6,8 +6,13 @@ export default {
     name: "HorizontalNavBar",
     data(){
         return {
-            drawer:false
+            drawer:false,
+            verticalNavigationItems: [
+                {icon: 'dashboard', text: "Dashboard", route: '/dashboard'},
+                {icon: 'product', text: "Products", route: '/products'},
+                {icon: 'person', text: "Team", route: '/team'}
+            ]
         }
-    }
+    },
 } as HorizontalNavigationType
 
