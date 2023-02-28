@@ -6,23 +6,23 @@
       <v-card class="pa-3">
         <v-layout row wrap>
           <v-row>
-            <v-col xs12 md6 lg4>
+            <v-col xs="12" sm="12" md="6" lg="4">
               <div class="caption grey--text font-weight-light">
                 Project-title
               </div>
               <div>any text</div>
             </v-col>
-            <v-col xs2 md2 lg2>
+            <v-col xs="12" sm="12" md="2" lg="2">
               <div class="caption grey--text font-weight-light">
                 Project-name
               </div>
               <div>any name</div>
             </v-col>
-            <v-col xs6 sm4 md2 lg2>
+            <v-col xs="6" sm="6" md="2" lg="2">
               <div class="caption grey--text">Date</div>
               <div>any date</div>
             </v-col>
-            <v-col xs2 sm4 md2 lg2>
+            <v-col xs="6" sm="6" md="2" lg="2">
               <div class="caption grey--text">Status</div>
               <div>any status</div>
             </v-col>
