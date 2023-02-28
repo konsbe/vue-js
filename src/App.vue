@@ -2,9 +2,9 @@
   <v-app>
     <v-main>
       <HorizontalNavBar />
-      <v-content class="mx-4 mb-4">
+      <v-container class="mx-4 mb-4">
         <RouterView />
-      </v-content>
+      </v-container>
     </v-main>
   </v-app>
 </template>
