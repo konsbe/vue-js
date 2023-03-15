@@ -1,5 +1,5 @@
 export default {
-  name: "Overview",
+  name: "mainButton",
   data: () => {
     return {
       count: 0,

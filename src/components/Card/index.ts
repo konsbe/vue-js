@@ -1,3 +1,5 @@
+import { ComponentProps } from "@/__VLS_types";
+
 export default {
   props: ["title"],
   template: `<h4>{{ title }}</h4>`,
