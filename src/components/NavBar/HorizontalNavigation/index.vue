@@ -19,7 +19,7 @@
       <v-spacer></v-spacer>
 
       <v-btn icon>
-        <v-icon>mdi-export</v-icon>
+        <v-icon color="white" icon="logout"/>
       </v-btn>
     </v-toolbar>
     <v-navigation-drawer app v-model="drawer" color="blue">
