@@ -2,7 +2,7 @@
   <v-app class="bg-grey-lighten-4">
     <v-main >
       <HorizontalNavBar />
-      <v-container class="mx-4 mb-4">
+      <v-container class="mx-4 mb-4 ">
         <RouterView />
       </v-container>
     </v-main>
