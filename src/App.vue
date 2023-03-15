@@ -1,6 +1,6 @@
 <template>
-  <v-app>
-    <v-main>
+  <v-app class="bg-grey-lighten-4">
+    <v-main >
       <HorizontalNavBar />
       <v-container class="mx-4 mb-4">
         <RouterView />
