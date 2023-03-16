@@ -1,9 +1,10 @@
 import { ComponentProps } from "@/__VLS_types"
-
+import PopUp from "@/components/PopUp/index.vue"
 export type HorizontalNavigationType = ComponentProps<{name?:string, data?:any}>
 
 export default {
     name: "HorizontalNavBar",
+    components: { PopUp },
     data(){
         return {
             drawer:false,
