@@ -1,7 +1,7 @@
 <script lang="ts" src="./index" />
 <template>
   <div id="products">
-    <h1 class="subheading grey--text router-header-name">Repos</h1>
+    <h1 class="subheading grey--text router-header-name">Github Repos</h1>
     <v-container class="router-container"> 
       <v-expansion-panels>
       <v-expansion-panel
