@@ -66,7 +66,7 @@ const routes = [
       {
         name: "Overview",
         path: "/about/overview",
-        component: () => import("@/views/AboutView/index.vue"),
+        component: () => import("@/views/AboutView/Overview.vue"),
       },
       {
         name: "Description",

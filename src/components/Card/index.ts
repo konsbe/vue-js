@@ -1,11 +1,10 @@
-import { ComponentProps } from "@/__VLS_types";
 
 export default {
   props: ["title"],
   template: `<h4>{{ title }}</h4>`,
 } as cardType;
 
-export type cardType = ComponentProps<{
+export type cardType ={
   props: string[];
   template: string;
-}>;
+};
