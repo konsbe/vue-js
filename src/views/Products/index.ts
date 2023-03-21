@@ -2,6 +2,7 @@ import { defineComponent } from "vue";
 import { GITHUB_ACCESS_TOKEN } from "../../../env";
 
 export default defineComponent({
+  
   data() {
     return {
       repositories: [] as any[],
@@ -21,7 +22,7 @@ export default defineComponent({
       });
       const response = await fetch(url, { headers });
       const data = await response.json();
-      console.log("data: ", data);
+      // console.log("data: ", data);
 
       this.repositories = data;
     },
