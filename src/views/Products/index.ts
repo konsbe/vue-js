@@ -1,8 +1,8 @@
 import { defineComponent } from "vue";
 import { GITHUB_ACCESS_TOKEN } from "../../../env";
+import GithubApi, { IGithubApi } from "@/utils/api/githubAPI";
 
 export default defineComponent({
-  
   data() {
     return {
       repositories: [] as any[],
@@ -13,18 +13,16 @@ export default defineComponent({
     this.getRepositories();
   },
   methods: {
-    async getRepositories(): Promise<void> {
-      const url = "https://api.github.com/user/repos";
-      const headers = new Headers({
-        Authorization: `Bearer ${this.accessToken}`,
-        // "application/vnd.github.v3+json",
-        Accept: "application/json",
+    async getRepositories() {
+      const obj: IGithubApi = new GithubApi();
+      this.repositories = await obj.repositories.then((dta) => {
+        return dta;
       });
-      const response = await fetch(url, { headers });
-      const data = await response.json();
-      // console.log("data: ", data);
-
-      this.repositories = data;
+      const commits = await obj
+        .getCommits(this.repositories[0].name)
+        .then((commit) => {
+          return commit;
+        });
     },
   },
 });

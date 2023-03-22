@@ -17,7 +17,6 @@ export default class GithubApi implements IGithubApi {
     });
     const response = await fetch(url, { headers });
     const data = await response.json();
-    console.log("data: ", data);
 
     return data;
   }
@@ -30,7 +29,6 @@ export default class GithubApi implements IGithubApi {
     });
     const response = await fetch(url, { headers });
     const data = await response.json();
-    console.log("data: ", data);
 
     return data;
   }
